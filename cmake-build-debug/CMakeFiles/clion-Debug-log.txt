@@ -1,4 +1,0 @@
-/Users/azaboglu/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/azaboglu/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S "/Users/azaboglu/Documents/Projects/CLion Projects/secwe_client_c" -B "/Users/azaboglu/Documents/Projects/CLion Projects/secwe_client_c/cmake-build-debug"
--- Configuring done (0.1s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/azaboglu/Documents/Projects/CLion Projects/secwe_client_c/cmake-build-debug

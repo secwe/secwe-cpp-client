@@ -1,3 +1,0 @@
-/Users/azaboglu/Documents/Projects/CLion Projects/secwe_client_c/cmake-build-debug/CMakeFiles/secwe_client_c.dir
-/Users/azaboglu/Documents/Projects/CLion Projects/secwe_client_c/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/azaboglu/Documents/Projects/CLion Projects/secwe_client_c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
