@@ -56,10 +56,20 @@ std::pair<std::string, std::string> secwe_client::Get
 
     if (readBuffer[0] == '{') {
         nlohmann::json j = nlohmann::json::parse(readBuffer);
+        if(j["domain"].is_null()) {
+            cerr << "[!] Error: Domain is null" << endl;
+            throw;
+        }
+        if(j["prediction"].is_null()) {
+            cerr << "[!] Error: Prediction is null" << endl;
+            throw;
+        }
         std::string prediction = j["prediction"].get<std::string>();
 
-        prediction_info predictionInfo(domain, prediction);
-        predictionInfo.print();
+        PREDICTION_INFO pi;
+        init_pred_info(&pi, domain, prediction);
+        print_prediction_info(&pi);
+
         return std::make_pair(domain, prediction);
     } else {
         uint32_t dwErr = errno;

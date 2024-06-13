@@ -4,16 +4,34 @@
 
 #include "prediction_info.h"
 
-prediction_info::prediction_info
-(const string &domain, const string &prediction) :
-_domain(domain),
-_prediction(prediction)
+void init_pred_info
+(
+        PREDICTION_INFO* pi,
+        const string& domain,
+        const string& prediction
+)
 {
+    pi->domain = domain;
+    pi->prediction = prediction;
 }
 
-void prediction_info::print()
+string
+get_domain (PREDICTION_INFO* pi)
 {
-    cout << "Domain: " << _domain
-    << "\nPrediction: " << _prediction
+    return pi->domain;
+}
+
+string
+get_prediction (PREDICTION_INFO* pi)
+{
+    return pi->prediction;
+}
+
+
+void
+print_prediction_info(PREDICTION_INFO* pi)
+{
+    cout << "Domain: " << get_domain(pi)
+    << "\nPrediction: " << get_prediction(pi)
     << endl;
 }

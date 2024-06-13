@@ -8,15 +8,23 @@
 #include <iostream>
 using namespace std;
 
-class prediction_info {
-private:
-    string _domain;
-    string _prediction;
-
-public:
-    prediction_info(const string& domain, const string& prediction);
-    void print();
+struct
+PREDICTION_INFO {
+    string domain;
+    string prediction;
 };
+
+void init_pred_info
+(
+        PREDICTION_INFO* pi,
+        const string& domain,
+        const string& prediction
+);
+
+
+string get_domain(PREDICTION_INFO* pi);
+string get_prediction(PREDICTION_INFO* pi);
+void print_prediction_info(PREDICTION_INFO* pi);
 
 
 #endif //SECWE_CLIENT_C_PREDICTION_INFO_H
