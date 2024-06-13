@@ -8,12 +8,13 @@
 #include <stdexcept>
 #include <cerrno>
 #include <iostream>
+#include <utility>
 using namespace std;
 
 secwe_client::secwe_client
-(const std::string& username, const std::string& apiKey)
-:_username(username),
-_apiKey(apiKey)
+(std::string  username, std::string  apiKey)
+:_username(std::move(username)),
+_apiKey(std::move(apiKey))
 {
     _curl = curl_easy_init();
     if (!_curl) {
@@ -30,7 +31,7 @@ std::pair<std::string, std::string> secwe_client::Get
     CURLcode res;
     std::string readBuffer;
 
-    struct curl_slist *headers = NULL;
+    struct curl_slist *headers = nullptr;
     headers = curl_slist_append(
             headers,
             ("X-User: " + _username).c_str()

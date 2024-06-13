@@ -17,12 +17,10 @@ private:
     CURL* _curl;
 
 public:
-
-    // Initialize the secwe api client with the given username and apiKey
-    secwe_client(const std::string& username, const std::string& apiKey);
+    secwe_client(std::string  username, std::string  apiKey);
 
     static size_t WriteCallback(void* contents, size_t size, size_t nmemb, void* userp) {
-        std::string* s = static_cast<std::string*>(userp);
+        auto* s = static_cast<std::string*>(userp);
         size_t newLength = size*nmemb;
         size_t oldLength = s->size();
         try {
