@@ -20,11 +20,6 @@ int main() {
     auto result =
             secweb.Get("secwe.com.tr");
     
-    /*
-     or URI/URL like 
-     https://secwe.com.tr, https://secwe.com.tr/robots.txt"
-    */
-    
     return 0;
 }
 ```
