@@ -9,7 +9,7 @@ int main() {
     );
 
     auto result =
-            secweb.Get("x.com");
+            secweb.Get("secwe.com.tr");
 
     //std::cout << "Domain: " << result.first << ", Prediction: " << result.second << std::endl;
     return 0;
